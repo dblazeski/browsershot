@@ -154,6 +154,22 @@ This package can be installed through Composer.
 composer require spatie/browsershot
 ```
 
+## Laravel 5.2
+This fork uses `"symfony/process": "^2|^3"` for `Laravel 5.2` compatibility
+
+To use it, in your composer.json in `repositories` add:
+```
+ "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/dblazeski/browsershot"
+    }
+]
+```
+
+And in composer.json under `require`:
+`"spatie/browsershot": "dev-laravel-52"`
+
 ## Usage
 
 In all examples it is assumed that you imported this namespace at the top of your file

@@ -645,7 +645,7 @@ class Browsershot
     {
         $fullCommand = $this->getFullCommand($command);
 
-        $process = Process::fromShellCommandline($fullCommand)->setTimeout($this->timeout);
+        $process = (new Process($fullCommand))->setTimeout($this->timeout);
 
         $process->run();
 
